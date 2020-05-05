@@ -151,7 +151,7 @@ class Manager(BrowserView):
         ''' Not to be done like this
         '''
         history_ids = filter(bool, self.filtered_history_ids())
-        logger.info('Got %s ids to purge' % len(history_ids))
+        logger.info('Got %s ids to purge' % len(list(history_ids)))
         if not history_ids:
             return 'No ids'
         for history_id in history_ids:
