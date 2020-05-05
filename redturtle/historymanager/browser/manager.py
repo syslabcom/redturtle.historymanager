@@ -168,7 +168,8 @@ class DereferenceView(Manager):
     def __call__(self):
         ''' Expose the dereference method in this context
         '''
-        return self.dereference()
+        obj, history_id = self.dereference()
+        return "Path: {} History ID: {}".format(obj.absolute_url_path(), history_id)
 
 
 class LocalPurgeView(Manager):
