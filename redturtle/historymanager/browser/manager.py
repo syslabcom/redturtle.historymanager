@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from BTrees.OOBTree import OOBTree
 from DateTime import DateTime
-from Products.Archetypes.utils import shasattr
+from Products.CMFPlone.utils import safe_hasattr
 from Products.CMFCore.utils import getToolByName
 from Products.CMFEditions.utilities import dereference
 from Products.Five.browser import BrowserView
@@ -123,7 +123,7 @@ class Manager(BrowserView):
         obj = self.dereference_by_id(history_id)[0]
         if not obj:
             return
-        if not shasattr(obj, 'version_id'):
+        if not safe_hasattr(obj, 'version_id'):
             return
         delattr(obj, 'version_id')
 
