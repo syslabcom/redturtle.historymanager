@@ -5,7 +5,8 @@ Changelog
 0.9.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Python 3 and Plone 5.2 compatibility fixes
+  [cillianderoiste]
 
 
 0.9.0 (2014-05-06)
